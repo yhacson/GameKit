@@ -1,9 +1,15 @@
 #ifndef _UTILS_I_
 #define _UTILS_I_
 
-%define INCLUDE_SRC(P)
+%define INCLUDE_SRC(FILE)
 %{
-    #include "../../../src/P"
+#include "../../../src/FILE"
+%}
+%enddef
+
+%define USING_NS(NS)
+%{
+using namespace NS;
 %}
 %enddef
 

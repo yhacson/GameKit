@@ -10,18 +10,18 @@ def mkdirs(dir):
     if not folder:
         os.makedirs(dir)
 
-# get auto wrap cpp files dir
-def getWrapCppDir():
-    cppDir = os.path.join(projDir, "binding", "auto_gen", "wrap")
-    mkdirs(cppDir)
-    return cppDir
-
 def getSrcDir():
     srcDir = os.path.join(projDir, "src")
     return srcDir
 
-# get auto gen c# files dir
-def getGenCSDir():
-    csDir = os.path.join(projDir, "binding", "auto_gen", "csharp")
-    mkdirs(csDir)
-    return csDir
+# @paths .i文件路径
+def getWrapFilePath(*paths):
+    filePath = os.path.join(projDir, "binding", "auto_gen", "wrap")
+    # 把 file.i 转换为 file_wrap.cxx 文件名格式
+    for i in range(0, len(paths)):
+        p = paths[i]
+        if(i == len(paths)-1):
+            p = p.strip(".i")
+            p = p + "_wrap.cxx"
+        filePath = os.path.join(filePath, p)
+    return filePath
