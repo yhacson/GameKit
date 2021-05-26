@@ -1,0 +1,1 @@
+set(ProjWorkspace ${CMAKE_CURRENT_LIST_DIR}/../../)
