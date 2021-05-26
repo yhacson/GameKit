@@ -1,1 +1,1 @@
-# GameKit
+A game toolkit
