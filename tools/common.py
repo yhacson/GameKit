@@ -16,12 +16,14 @@ def getSrcDir():
 
 # @paths .i文件路径
 def getWrapFilePath(*paths):
-    filePath = os.path.join(projDir, "binding", "auto_gen", "wrap")
-    # 把 file.i 转换为 file_wrap.cxx 文件名格式
+    # 把 dir/file.i 转换为 dir_file_wrap.cxx 文件名格式
+    fileName = ""
     for i in range(0, len(paths)):
         p = paths[i]
         if(i == len(paths)-1):
             p = p.strip(".i")
             p = p + "_wrap.cxx"
-        filePath = os.path.join(filePath, p)
+        fileName = os.path.join(fileName, p)
+    fileName = fileName.replace(os.path.sep, "_")
+    filePath = os.path.join(projDir, "binding", "auto_gen", "wrap", fileName)
     return filePath

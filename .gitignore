@@ -7,6 +7,9 @@
 *.o
 *.obj
 __pycache__
+*.exp
+*.ilk
+*.pdb
 
 # Precompiled Headers
 *.gch
@@ -32,5 +35,9 @@ __pycache__
 *.out
 *.app
 
-# DS_Store
+# Project and configs
 .DS_Store
+.vscode
+build
+*.filters
+*.log
