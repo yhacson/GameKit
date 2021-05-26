@@ -2,8 +2,8 @@
 
 INCLUDE_SRC(system/Platform.h)
 %{
-using namespace Luxkit::System;
+using namespace GameKit::System;
 %}
 
-// GET_SRC_PATH(system/Platform.h)
+%include "GameKit.h"
 %include "system/Platform.h"

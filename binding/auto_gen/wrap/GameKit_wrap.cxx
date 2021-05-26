@@ -302,7 +302,7 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_GameKit(SWIG_CSharpString
 #include "../../../src/system/Platform.h"
 
 
-using namespace Luxkit::System;
+using namespace GameKit::System;
 
 
 #ifdef __cplusplus

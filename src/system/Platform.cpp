@@ -1,53 +1,50 @@
 #include "Platform.h"
 
-namespace GameKit
+NS_GK_SY_BEG
+
+const unsigned int Platform::Unknow = 0;
+const unsigned int Platform::Windows = 1;
+const unsigned int Platform::Android = 2;
+const unsigned int Platform::IOS = 3;
+
+unsigned int Platform::GetType()
 {
-    namespace System
-    {
-        const unsigned int Platform::Unknow = 0;
-        const unsigned int Platform::Windows = 1;
-        const unsigned int Platform::Android = 2;
-        const unsigned int Platform::IOS = 3;
-
-        unsigned int Platform::GetType()
-        {
-            auto type = Platform::Unknow;
+    auto type = Platform::Unknow;
 #ifdef _Win32
-            type = Platform::Windows;
+    type = Platform::Windows;
 #elif __ANDROID__
-            type = Platform::Android;
+    type = Platform::Android;
 #elif __APPLE__
-            type = Platform::IOS;
+    type = Platform::IOS;
 #endif
-            return type;
-        }
+    return type;
+}
 
-        const char *Platform::GetString()
-        {
-            auto type = GetType();
-            char *str = "Unknow";
-            switch (type)
-            {
-            case Windows:
-                str = "Windows";
-                break;
+const char *Platform::GetString()
+{
+    auto type = GetType();
+    char *str = "Unknow";
+    switch (type)
+    {
+    case Windows:
+        str = "Windows";
+        break;
 
-            case Android:
-                str = "Android";
-                break;
+    case Android:
+        str = "Android";
+        break;
 
-            case IOS:
-                str = "iOS";
-                break;
+    case IOS:
+        str = "iOS";
+        break;
 
-            case Unknow:
-            default:
-                str = "Unknow";
-                break;
-            }
+    case Unknow:
+    default:
+        str = "Unknow";
+        break;
+    }
 
-            return str;
-        }
+    return str;
+}
 
-    } // namespace System
-} // namespace GameKit
+NS_GK_SY_END
