@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace GameKit.System {
 
 class GameKitPINVOKE {
 
@@ -192,27 +193,29 @@ class GameKitPINVOKE {
   }
 
 
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_Platform_GetType")]
+  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_Platform_GetType___")]
   public static extern uint Platform_GetType();
 
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_Platform_GetString")]
+  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_Platform_GetString___")]
   public static extern string Platform_GetString();
 
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_Platform_Unknow_get")]
+  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_Platform_Unknow_get___")]
   public static extern uint Platform_Unknow_get();
 
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_Platform_Windows_get")]
+  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_Platform_Windows_get___")]
   public static extern uint Platform_Windows_get();
 
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_Platform_Android_get")]
+  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_Platform_Android_get___")]
   public static extern uint Platform_Android_get();
 
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_Platform_IOS_get")]
+  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_Platform_IOS_get___")]
   public static extern uint Platform_IOS_get();
 
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_new_Platform")]
+  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_new_Platform___")]
   public static extern global::System.IntPtr new_Platform();
 
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_delete_Platform")]
+  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_delete_Platform___")]
   public static extern void delete_Platform(global::System.Runtime.InteropServices.HandleRef jarg1);
+}
+
 }

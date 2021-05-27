@@ -309,7 +309,7 @@ using namespace GameKit::System;
 extern "C" {
 #endif
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Platform_GetType() {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameKitfSystem_Platform_GetType___() {
   unsigned int jresult ;
   unsigned int result;
   
@@ -319,7 +319,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Platform_GetType() {
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_Platform_GetString() {
+SWIGEXPORT char * SWIGSTDCALL CSharp_GameKitfSystem_Platform_GetString___() {
   char * jresult ;
   char *result = 0 ;
   
@@ -329,7 +329,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_Platform_GetString() {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Platform_Unknow_get() {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameKitfSystem_Platform_Unknow_get___() {
   unsigned int jresult ;
   unsigned int result;
   
@@ -339,7 +339,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Platform_Unknow_get() {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Platform_Windows_get() {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameKitfSystem_Platform_Windows_get___() {
   unsigned int jresult ;
   unsigned int result;
   
@@ -349,7 +349,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Platform_Windows_get() {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Platform_Android_get() {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameKitfSystem_Platform_Android_get___() {
   unsigned int jresult ;
   unsigned int result;
   
@@ -359,7 +359,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Platform_Android_get() {
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Platform_IOS_get() {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameKitfSystem_Platform_IOS_get___() {
   unsigned int jresult ;
   unsigned int result;
   
@@ -369,7 +369,7 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_Platform_IOS_get() {
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_Platform() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_GameKitfSystem_new_Platform___() {
   void * jresult ;
   GameKit::System::Platform *result = 0 ;
   
@@ -379,7 +379,7 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_new_Platform() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_Platform(void * jarg1) {
+SWIGEXPORT void SWIGSTDCALL CSharp_GameKitfSystem_delete_Platform___(void * jarg1) {
   GameKit::System::Platform *arg1 = (GameKit::System::Platform *) 0 ;
   
   arg1 = (GameKit::System::Platform *)jarg1; 

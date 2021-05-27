@@ -8,6 +8,7 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace GameKit.System {
 
 public class Platform : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
@@ -83,5 +84,7 @@ public class Platform : global::System.IDisposable {
 
   public Platform() : this(GameKitPINVOKE.new_Platform(), true) {
   }
+
+}
 
 }

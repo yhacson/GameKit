@@ -8,6 +8,9 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
+namespace GameKit.System {
 
 public class GameKit {
+}
+
 }
