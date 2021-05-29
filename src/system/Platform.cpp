@@ -10,7 +10,7 @@ const unsigned int Platform::IOS = 3;
 unsigned int Platform::GetType()
 {
     auto type = Platform::Unknow;
-#ifdef _Win32
+#ifdef _WIN32
     type = Platform::Windows;
 #elif __ANDROID__
     type = Platform::Android;
