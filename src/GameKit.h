@@ -1,3 +1,5 @@
+#pragma once
+
 // namespace GameKit
 #define NS_GK_BEG namespace GameKit {
 #define NS_GK_END }

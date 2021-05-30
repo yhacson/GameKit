@@ -1,13 +1,10 @@
-#include "Platform.h"
+#include "Runtime.h"
+#include "system/Platform.h"
 
-NS_GK_SY_BEG
+NS_USING_GK
+NS_USING_GK_SY
 
-const unsigned int Platform::Unknow = 0;
-const unsigned int Platform::Windows = 1;
-const unsigned int Platform::Android = 2;
-const unsigned int Platform::IOS = 3;
-
-unsigned int Platform::GetType()
+unsigned int Runtime::CurPlatformType()
 {
     auto type = Platform::Unknow;
 #ifdef _WIN32
@@ -20,25 +17,25 @@ unsigned int Platform::GetType()
     return type;
 }
 
-const char *Platform::GetString()
+const char *Runtime::CurPlatformStr()
 {
-    auto type = GetType();
+    auto type = CurPlatformType();
     char *str = "Unknow";
     switch (type)
     {
-    case Windows:
+    case Platform::Windows:
         str = "Windows";
         break;
 
-    case Android:
+    case Platform::Android:
         str = "Android";
         break;
 
-    case IOS:
+    case Platform::IOS:
         str = "iOS";
         break;
 
-    case Unknow:
+    case Platform::Unknow:
     default:
         str = "Unknow";
         break;
@@ -46,5 +43,3 @@ const char *Platform::GetString()
 
     return str;
 }
-
-NS_GK_SY_END
