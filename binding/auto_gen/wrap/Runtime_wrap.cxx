@@ -243,7 +243,7 @@ static void SWIGUNUSED SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpExcepti
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks_PlatformMod(
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks_RuntimeMod(
                                                 SWIG_CSharpExceptionCallback_t applicationCallback,
                                                 SWIG_CSharpExceptionCallback_t arithmeticCallback,
                                                 SWIG_CSharpExceptionCallback_t divideByZeroCallback, 
@@ -271,7 +271,7 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks_PlatformMod(
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionArgumentCallbacks_PlatformMod(
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionArgumentCallbacks_RuntimeMod(
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentCallback,
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentNullCallback,
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentOutOfRangeCallback) {
@@ -289,7 +289,7 @@ static SWIG_CSharpStringHelperCallback SWIG_csharp_string_callback = NULL;
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_PlatformMod(SWIG_CSharpStringHelperCallback callback) {
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_RuntimeMod(SWIG_CSharpStringHelperCallback callback) {
   SWIG_csharp_string_callback = callback;
 }
 
@@ -299,67 +299,50 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_PlatformMod(SWIG_CSharpSt
 #define SWIG_contract_assert(nullreturn, expr, msg) if (!(expr)) {SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, msg, ""); return nullreturn; } else
 
 
-#include "../../../src/system/Platform.h"
+#include "../../../src/Runtime.h"
+
+
+using namespace GameKit;
 
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameKitfSystem_Platform_Unknow_get___() {
+SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameKit_Runtime_CurPlatformType() {
   unsigned int jresult ;
   unsigned int result;
   
-  result = (unsigned int)GameKit::System::Platform::Unknow;
+  result = (unsigned int)GameKit::Runtime::CurPlatformType();
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameKitfSystem_Platform_Windows_get___() {
-  unsigned int jresult ;
-  unsigned int result;
+SWIGEXPORT char * SWIGSTDCALL CSharp_GameKit_Runtime_CurPlatformStr() {
+  char * jresult ;
+  char *result = 0 ;
   
-  result = (unsigned int)GameKit::System::Platform::Windows;
-  jresult = result; 
+  result = (char *)GameKit::Runtime::CurPlatformStr();
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
 
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameKitfSystem_Platform_Android_get___() {
-  unsigned int jresult ;
-  unsigned int result;
-  
-  result = (unsigned int)GameKit::System::Platform::Android;
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT unsigned int SWIGSTDCALL CSharp_GameKitfSystem_Platform_IOS_get___() {
-  unsigned int jresult ;
-  unsigned int result;
-  
-  result = (unsigned int)GameKit::System::Platform::IOS;
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_GameKitfSystem_new_Platform___() {
+SWIGEXPORT void * SWIGSTDCALL CSharp_GameKit_new_Runtime() {
   void * jresult ;
-  GameKit::System::Platform *result = 0 ;
+  GameKit::Runtime *result = 0 ;
   
-  result = (GameKit::System::Platform *)new GameKit::System::Platform();
+  result = (GameKit::Runtime *)new GameKit::Runtime();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_GameKitfSystem_delete_Platform___(void * jarg1) {
-  GameKit::System::Platform *arg1 = (GameKit::System::Platform *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_GameKit_delete_Runtime(void * jarg1) {
+  GameKit::Runtime *arg1 = (GameKit::Runtime *) 0 ;
   
-  arg1 = (GameKit::System::Platform *)jarg1; 
+  arg1 = (GameKit::Runtime *)jarg1; 
   delete arg1;
 }
 

@@ -8,22 +8,22 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-namespace GameKit.System {
+namespace GameKit {
 
-public class Platform : global::System.IDisposable {
+public class Runtime : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal Platform(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal Runtime(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Platform obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(Runtime obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~Platform() {
+  ~Runtime() {
     Dispose(false);
   }
 
@@ -37,20 +37,26 @@ public class Platform : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          PlatformModPINVOKE.delete_Platform(swigCPtr);
+          RuntimeModPINVOKE.delete_Runtime(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public Platform() : this(PlatformModPINVOKE.new_Platform(), true) {
+  public static uint CurPlatformType() {
+    uint ret = RuntimeModPINVOKE.Runtime_CurPlatformType();
+    return ret;
   }
 
-  public static readonly uint Unknow = PlatformModPINVOKE.Platform_Unknow_get();
-  public static readonly uint Windows = PlatformModPINVOKE.Platform_Windows_get();
-  public static readonly uint Android = PlatformModPINVOKE.Platform_Android_get();
-  public static readonly uint IOS = PlatformModPINVOKE.Platform_IOS_get();
+  public static string CurPlatformStr() {
+    string ret = RuntimeModPINVOKE.Runtime_CurPlatformStr();
+    return ret;
+  }
+
+  public Runtime() : this(RuntimeModPINVOKE.new_Runtime(), true) {
+  }
+
 }
 
 }

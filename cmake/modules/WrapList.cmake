@@ -4,4 +4,5 @@ set(WrapDir ${ProjWorkspace}/binding/auto_gen/wrap/)
 
 set(SrcWrap
     ${WrapDir}/system_Platform_wrap.cxx
+    ${WrapDir}/Runtime_wrap.cxx
 )

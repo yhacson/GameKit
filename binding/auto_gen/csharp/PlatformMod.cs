@@ -10,7 +10,7 @@
 
 namespace GameKit.System {
 
-public class GameKit {
+public class PlatformMod {
 }
 
 }

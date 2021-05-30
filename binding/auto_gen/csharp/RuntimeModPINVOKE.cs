@@ -8,9 +8,9 @@
 // the SWIG interface file instead.
 //------------------------------------------------------------------------------
 
-namespace GameKit.System {
+namespace GameKit {
 
-class GameKitPINVOKE {
+class RuntimeModPINVOKE {
 
   protected class SWIGExceptionHelper {
 
@@ -33,8 +33,8 @@ class GameKitPINVOKE {
     static ExceptionArgumentDelegate argumentNullDelegate = new ExceptionArgumentDelegate(SetPendingArgumentNullException);
     static ExceptionArgumentDelegate argumentOutOfRangeDelegate = new ExceptionArgumentDelegate(SetPendingArgumentOutOfRangeException);
 
-    [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="SWIGRegisterExceptionCallbacks_GameKit")]
-    public static extern void SWIGRegisterExceptionCallbacks_GameKit(
+    [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="SWIGRegisterExceptionCallbacks_RuntimeMod")]
+    public static extern void SWIGRegisterExceptionCallbacks_RuntimeMod(
                                 ExceptionDelegate applicationDelegate,
                                 ExceptionDelegate arithmeticDelegate,
                                 ExceptionDelegate divideByZeroDelegate, 
@@ -47,8 +47,8 @@ class GameKitPINVOKE {
                                 ExceptionDelegate overflowDelegate, 
                                 ExceptionDelegate systemExceptionDelegate);
 
-    [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="SWIGRegisterExceptionArgumentCallbacks_GameKit")]
-    public static extern void SWIGRegisterExceptionCallbacksArgument_GameKit(
+    [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="SWIGRegisterExceptionArgumentCallbacks_RuntimeMod")]
+    public static extern void SWIGRegisterExceptionCallbacksArgument_RuntimeMod(
                                 ExceptionArgumentDelegate argumentDelegate,
                                 ExceptionArgumentDelegate argumentNullDelegate,
                                 ExceptionArgumentDelegate argumentOutOfRangeDelegate);
@@ -102,7 +102,7 @@ class GameKitPINVOKE {
     }
 
     static SWIGExceptionHelper() {
-      SWIGRegisterExceptionCallbacks_GameKit(
+      SWIGRegisterExceptionCallbacks_RuntimeMod(
                                 applicationDelegate,
                                 arithmeticDelegate,
                                 divideByZeroDelegate,
@@ -115,7 +115,7 @@ class GameKitPINVOKE {
                                 overflowDelegate,
                                 systemDelegate);
 
-      SWIGRegisterExceptionCallbacksArgument_GameKit(
+      SWIGRegisterExceptionCallbacksArgument_RuntimeMod(
                                 argumentDelegate,
                                 argumentNullDelegate,
                                 argumentOutOfRangeDelegate);
@@ -174,48 +174,36 @@ class GameKitPINVOKE {
     public delegate string SWIGStringDelegate(string message);
     static SWIGStringDelegate stringDelegate = new SWIGStringDelegate(CreateString);
 
-    [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="SWIGRegisterStringCallback_GameKit")]
-    public static extern void SWIGRegisterStringCallback_GameKit(SWIGStringDelegate stringDelegate);
+    [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="SWIGRegisterStringCallback_RuntimeMod")]
+    public static extern void SWIGRegisterStringCallback_RuntimeMod(SWIGStringDelegate stringDelegate);
 
     static string CreateString(string cString) {
       return cString;
     }
 
     static SWIGStringHelper() {
-      SWIGRegisterStringCallback_GameKit(stringDelegate);
+      SWIGRegisterStringCallback_RuntimeMod(stringDelegate);
     }
   }
 
   static protected SWIGStringHelper swigStringHelper = new SWIGStringHelper();
 
 
-  static GameKitPINVOKE() {
+  static RuntimeModPINVOKE() {
   }
 
 
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_Platform_GetType___")]
-  public static extern uint Platform_GetType();
+  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKit_Runtime_CurPlatformType")]
+  public static extern uint Runtime_CurPlatformType();
 
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_Platform_GetString___")]
-  public static extern string Platform_GetString();
+  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKit_Runtime_CurPlatformStr")]
+  public static extern string Runtime_CurPlatformStr();
 
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_Platform_Unknow_get___")]
-  public static extern uint Platform_Unknow_get();
+  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKit_new_Runtime")]
+  public static extern global::System.IntPtr new_Runtime();
 
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_Platform_Windows_get___")]
-  public static extern uint Platform_Windows_get();
-
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_Platform_Android_get___")]
-  public static extern uint Platform_Android_get();
-
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_Platform_IOS_get___")]
-  public static extern uint Platform_IOS_get();
-
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_new_Platform___")]
-  public static extern global::System.IntPtr new_Platform();
-
-  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKitfSystem_delete_Platform___")]
-  public static extern void delete_Platform(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("GameKit", EntryPoint="CSharp_GameKit_delete_Runtime")]
+  public static extern void delete_Runtime(global::System.Runtime.InteropServices.HandleRef jarg1);
 }
 
 }
